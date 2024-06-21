@@ -1,4 +1,6 @@
 import { homeTab } from "./home";
+import { menuTab } from "./menu";
+import { contactTab } from "./contact";
 import "../css/index.css";
 
 const pageContent = (function() {
@@ -10,6 +12,10 @@ const pageContent = (function() {
     btn.classList.add("selected");
     if (btn.id === "home") {
       homeTab(contentDiv);
+    } else if (btn.id === "menu") {
+      menuTab(contentDiv);
+    } else if (btn.id === "contact") {
+      contactTab(contentDiv);
     }
   }
 
