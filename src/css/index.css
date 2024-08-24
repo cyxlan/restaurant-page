@@ -1,5 +1,19 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 body {
   font-family: system-ui, sans-serif;
+  background: no-repeat top / cover url(../img/bg.png);
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 4rem;
+  letter-spacing: 70px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgba(255, 203, 155, 0.8);
 }
