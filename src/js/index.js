@@ -21,6 +21,9 @@ const pageContent = (function() {
 
   tabBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
+      tabBtns.forEach((i) => {
+        i.classList.remove("selected");
+      })
       switchTab(btn);
     })
   })
