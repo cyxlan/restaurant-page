@@ -3,8 +3,7 @@
 
 body {
   font-family: 'Spectral', serif;
-  background: no-repeat top / cover url(../img/bg.png);
-  height: 100vh;
+  background: no-repeat top / cover fixed url(../img/bg.png);
 }
 
 h1, h2 {
@@ -49,10 +48,10 @@ nav {
 
 .container {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 40px auto 80px;
   padding: 40px 60px;
   border-radius: 5px;
-  background: linear-gradient(rgb(239, 208, 180), rgb(198, 163, 140));
+  background: linear-gradient(rgb(239, 208, 180), rgb(238, 198, 171));
   color: rgb(101, 77, 64);
   box-shadow: 0 10px 20px rgba(90, 63, 46, 0.8);
 }
