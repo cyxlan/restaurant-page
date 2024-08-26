@@ -1,13 +1,29 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+:root {
+  --font-primary: 'Spectral', serif;
+  --font-secondary: 'EB Garamond', serif;
+
+  --white: rgb(255, 255, 255);
+  --bg-1: rgb(239, 208, 180);
+  --bg-2: rgb(238, 198, 171);
+  /* save rgb values separately to use in transparent rgba colours */
+  --light-1-rgb: 255, 203, 155;
+  --light-1: rgb(var(--light-1-rgb));
+  --light-2: rgb(173, 142, 112);
+  --dark-1: rgb(101, 77, 64);
+  --dark-2-rgb: 90, 63, 46;
+  --dark-2: rgb(var(--dark-2-raw));
+}
+
 body {
-  font-family: 'Spectral', serif;
+  font-family: var(--font-primary);
   background: no-repeat top / cover fixed url(../img/bg.png);
 }
 
 h1, h2 {
-  font-family: 'EB Garamond', serif;
+  font-family: var(--font-secondary);
 }
 
 h1, h2,
@@ -20,8 +36,8 @@ h1 {
   font-weight: 500;
   font-size: 4rem;
   letter-spacing: 70px;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 20px rgba(255, 203, 155, 0.8);
+  color: var(--white);
+  text-shadow: 0 0 20px rgba(var(--light-1-rgb), 0.8);
 }
 
 nav {
@@ -35,14 +51,14 @@ nav {
 .tab-btn {
   font-weight: 700;
   font-size: 1.2rem;
-  color: rgb(255, 203, 155);
+  color: var(--light-1);
   width: 100%;
   border-bottom: 1px solid transparent;
 
   &:hover,
   &:focus,
   &.selected {
-    border-bottom-color: rgb(173, 142, 112);
+    border-bottom-color: var(--light-2);
   }
 }
 
@@ -50,15 +66,15 @@ nav {
   max-width: 1200px;
   margin: 40px auto 80px;
   padding: 40px 60px 60px;
-  background: linear-gradient(rgb(239, 208, 180), rgb(238, 198, 171));
-  color: rgb(101, 77, 64);
-  box-shadow: 0 10px 20px rgba(90, 63, 46, 0.8);
+  background: linear-gradient(var(--bg-1), var(--bg-2));
+  color: var(--dark-1);
+  box-shadow: 0 10px 20px rgba(var(--dark-2-rgb), 0.8);
 }
 
 h2 {
   font-size: 1.8rem;
   letter-spacing: 10px;
-  border-bottom: 1px solid rgb(173, 142, 112);
+  border-bottom: 1px solid var(--light-2);
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
@@ -66,7 +82,7 @@ h2 {
 h2,
 .item-name {
   font-style: italic;
-  color: rgb(90, 63, 46);
+  color: var(--dark-2);
 }
 
 .menu-items-wrap {
