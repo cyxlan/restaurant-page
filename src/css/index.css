@@ -50,7 +50,6 @@ nav {
   max-width: 1200px;
   margin: 40px auto 80px;
   padding: 40px 60px 60px;
-  border-radius: 5px;
   background: linear-gradient(rgb(239, 208, 180), rgb(238, 198, 171));
   color: rgb(101, 77, 64);
   box-shadow: 0 10px 20px rgba(90, 63, 46, 0.8);
@@ -59,11 +58,15 @@ nav {
 h2 {
   font-size: 1.8rem;
   letter-spacing: 10px;
-  font-style: italic;
-  color: rgb(90, 63, 46);
   border-bottom: 1px solid rgb(173, 142, 112);
   padding-bottom: 15px;
   margin-bottom: 30px;
+}
+
+h2,
+.item-name {
+  font-style: italic;
+  color: rgb(90, 63, 46);
 }
 
 .menu-items-wrap {
@@ -79,5 +82,33 @@ h2 {
 
   &+ .menu-item {
     margin-top: 10px;
+  }
+}
+
+.item-info {
+  /* align item name & cost on same line */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 30px;
+}
+.item-name {
+  font-size: 1.2rem;
+}
+.item-desc {
+  padding-bottom: 10px;
+  flex-basis: 100%; /* take up full width */
+}
+.item-cost {
+  font-weight: 500;
+  display: flex; /* vertically align icon & text */
+  /* mora icon */
+  &::before {
+    margin-left: -5px; /* offset for transparent part of img */
+    content: "";
+    display: inline-block;
+    background: url(../img/Mora.webp) no-repeat center/cover;
+    width: 30px;
+    height: 30px;
   }
 }

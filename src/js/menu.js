@@ -45,8 +45,8 @@ itemDatas.forEach((itemData) => {
   const itemInfo = createEl("div", "", "item-info");
   itemInfo.append(
     createEl("h3", itemData.name, "item-name"),
-    createEl("p", itemData.desc, "item-desc"),
-    createEl("p", itemData.cost, "item-cost")
+    createEl("p", itemData.cost, "item-cost"),
+    createEl("p", itemData.desc, "item-desc")
   )
   item.append (
     createEl("img", itemData.img, "item-img"),
