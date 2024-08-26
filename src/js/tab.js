@@ -1,6 +1,10 @@
-function createEl(tagName, textContent, classes) {
+function createEl(tagName, content, classes) {
   const el = document.createElement(tagName);
-  el.textContent = textContent;
+  if (tagName === "img") {
+    el.src = content;
+  } else {
+    el.textContent = content;
+  }
   if (classes) {
     el.classList.add(classes);
   }
