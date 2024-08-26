@@ -3,10 +3,10 @@ import { createEl } from "./tab";
 import imgWolfhookJuice from "../img/Wolfhook_Juice.webp";
 import imgBerryMintBurst from "../img/Berry_Mint_Burst.webp";
 import imgAppleCider from "../img/Apple_Cider.webp";
-import imgSparklingBerryJuice from "../img/Apple_Cider.webp";
+import imgSparklingBerryJuice from "../img/Sparkling_Berry_Juice.webp";
 import imgFruitsOfTheFestival from "../img/Fruits_of_the_Festival.webp";
 
-const itemInfos = [
+const itemDatas = [
   {
     "name": "Wolfhook Juice",
     "img": imgWolfhookJuice,
@@ -39,23 +39,27 @@ const itemInfos = [
   }
 ]
 
-const menuItems = []
-itemInfos.forEach((item) => {
-  const div = createEl("div", "", "menu-item");
-  div.append(
-    createEl("img", item.img, "item-img"),
-    createEl("h3", item.name, "item-name"),
-    createEl("p", item.desc, "item-desc"),
-    createEl("p", item.cost, "item-cost")
+const menuItems = createEl("div", "", "menu-items-wrap")
+itemDatas.forEach((itemData) => {
+  const item = createEl("article", "", "menu-item");
+  const itemInfo = createEl("div", "", "item-info");
+  itemInfo.append(
+    createEl("h3", itemData.name, "item-name"),
+    createEl("p", itemData.desc, "item-desc"),
+    createEl("p", itemData.cost, "item-cost")
   )
-  menuItems.push(div);
+  item.append (
+    createEl("img", itemData.img, "item-img"),
+    itemInfo
+  )
+  menuItems.append(item);
 })
 
 export function menuTab(contentDiv) {
   const container = createEl("div", "", "container");
   container.append(
     createEl("h2", "Menu"),
-    ...menuItems
+    menuItems
   );
   contentDiv.append(container);
 }

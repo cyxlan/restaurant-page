@@ -49,7 +49,7 @@ nav {
 .container {
   max-width: 1200px;
   margin: 40px auto 80px;
-  padding: 40px 60px;
+  padding: 40px 60px 60px;
   border-radius: 5px;
   background: linear-gradient(rgb(239, 208, 180), rgb(238, 198, 171));
   color: rgb(101, 77, 64);
@@ -63,5 +63,21 @@ h2 {
   color: rgb(90, 63, 46);
   border-bottom: 1px solid rgb(173, 142, 112);
   padding-bottom: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.menu-items-wrap {
+  /* offset for transparent part of img */
+  margin-left: -100px;
+}
+.menu-item {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  max-width: calc(256px + 60ch); /* img width + desc line length */
+
+  &+ .menu-item {
+    margin-top: 10px;
+  }
 }
