@@ -6,7 +6,7 @@ function createEl(tagName, content, classes) {
     el.textContent = content;
   }
   if (classes) {
-    el.classList.add(classes);
+    el.classList.add(...classes);
   }
   return el;
 }

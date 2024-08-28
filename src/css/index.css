@@ -14,7 +14,7 @@
   --light-2: rgb(173, 142, 112);
   --dark-1: rgb(101, 77, 64);
   --dark-2-rgb: 90, 63, 46;
-  --dark-2: rgb(var(--dark-2-raw));
+  --dark-2: rgb(var(--dark-2-rgb));
 }
 
 body {
@@ -66,9 +66,11 @@ nav {
   max-width: 1200px;
   margin: 40px auto 80px;
   padding: 40px 60px 60px;
-  background: linear-gradient(var(--bg-1), var(--bg-2));
-  color: var(--dark-1);
-  box-shadow: 0 10px 20px rgba(var(--dark-2-rgb), 0.8);
+  &.light {
+    background: linear-gradient(var(--bg-1), var(--bg-2));
+    color: var(--dark-1);
+    box-shadow: 0 10px 20px rgba(var(--dark-2-rgb), 0.8);
+  }
 }
 
 h2 {

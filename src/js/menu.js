@@ -39,24 +39,24 @@ const itemDatas = [
   }
 ]
 
-const menuItems = createEl("div", "", "menu-items-wrap")
+const menuItems = createEl("div", "", ["menu-items-wrap"])
 itemDatas.forEach((itemData) => {
-  const item = createEl("article", "", "menu-item");
-  const itemInfo = createEl("div", "", "item-info");
+  const item = createEl("article", "", ["menu-item"]);
+  const itemInfo = createEl("div", "", ["item-info"]);
   itemInfo.append(
-    createEl("h3", itemData.name, "item-name"),
-    createEl("p", itemData.cost, "item-cost"),
-    createEl("p", itemData.desc, "item-desc")
+    createEl("h3", itemData.name, ["item-name"]),
+    createEl("p", itemData.cost, ["item-cost"]),
+    createEl("p", itemData.desc, ["item-desc"])
   )
   item.append (
-    createEl("img", itemData.img, "item-img"),
+    createEl("img", itemData.img, ["item-img"]),
     itemInfo
   )
   menuItems.append(item);
 })
 
 export function menuTab(contentDiv) {
-  const container = createEl("div", "", "container");
+  const container = createEl("div", "", ["container", "light"]);
   container.append(
     createEl("h2", "Menu"),
     menuItems
