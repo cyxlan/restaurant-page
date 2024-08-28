@@ -1,4 +1,5 @@
 import { createEl } from "./tab";
+import "../css/menu.css";
 
 import imgWolfhookJuice from "../img/Wolfhook_Juice.webp";
 import imgBerryMintBurst from "../img/Berry_Mint_Burst.webp";

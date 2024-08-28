@@ -1,4 +1,5 @@
 import { createEl } from "./tab";
+import "../css/home.css";
 
 export function homeTab(contentDiv) {
   const container = createEl("div", "", ["container", "dark"]);

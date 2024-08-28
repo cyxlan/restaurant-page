@@ -1,0 +1,43 @@
+.menu-items-wrap {
+  /* offset for transparent part of img */
+  margin-left: -100px;
+}
+.menu-item {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  max-width: calc(256px + 60ch); /* img width + desc line length */
+
+  &+ .menu-item {
+    margin-top: 10px;
+  }
+}
+
+.item-info {
+  /* align item name & cost on same line */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 30px;
+}
+.item-name {
+  font-size: 1.2rem;
+}
+.item-desc {
+  padding-bottom: 10px;
+  flex-basis: 100%; /* take up full width */
+}
+.item-cost {
+  font-weight: 500;
+  display: flex; /* vertically align icon & text */
+  /* mora icon */
+  &::before {
+    margin-left: -5px; /* offset for transparent part of img */
+    content: "";
+    display: inline-block;
+    background: url(../img/Mora.webp) no-repeat center/cover;
+    width: 30px;
+    height: 30px;
+  }
+}
