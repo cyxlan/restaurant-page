@@ -1,9 +1,31 @@
 import { createEl } from "./tab";
+import "../css/contact.css";
+
+import imgAngelsShare from "../img/Angels_Share.png";
+
+const contactWrap = createEl("div", "", ["contact-wrap"]);
+const contactInfo = createEl("div", "", ["contact-info"]);
+contactInfo.append(
+  createEl("h3", "Address"),
+  createEl("p", "Mondstadt City"),
+  createEl("p", "Starfell Valley, Mondstadt"),
+  createEl("h3", "Hours"),
+  createEl("p", "12:00 - 02:00"),
+  createEl("p", "Sunday to Saturday"),
+  createEl("h3", "Head Office"),
+  createEl("p", "Dawn Winery"),
+  createEl("p", "Windwail Highland, Mondstadt")
+)
+contactWrap.append(
+  createEl("img", imgAngelsShare, ["building-img"]),
+  contactInfo
+)
 
 export function contactTab(contentDiv) {
-  const els = [
+  const container = createEl("div", "", ["container", "light"]);
+  container.append(
     createEl("h2", "Contact"),
-    createEl("p", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt veritatis, praesentium fuga dolore assumenda, similique incidunt totam id natus, nulla sed ipsam reiciendis deleniti. Earum excepturi quidem animi iure nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum consectetur reprehenderit numquam perferendis placeat saepe adipisci molestiae voluptate, voluptatem, sequi officia sunt voluptatum odit facilis soluta tenetur cupiditate quos sit.")
-  ];
-  contentDiv.append(...els);
+    contactWrap
+  );
+  contentDiv.append(container);
 }

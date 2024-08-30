@@ -1,0 +1,21 @@
+.contact-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.building-img {
+  max-height: 400px;
+  width: auto;
+}
+
+.contact-info {
+  text-align: center;
+
+  h3:not(:first-of-type) {
+    margin-top: 50px;
+  }
+}

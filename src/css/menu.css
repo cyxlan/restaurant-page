@@ -1,6 +1,7 @@
 .menu-items-wrap {
   /* offset for transparent part of img */
   margin-left: -100px;
+  margin-top: -20px;
 }
 .menu-item {
   margin: 0 auto;
